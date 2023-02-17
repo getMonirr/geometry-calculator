@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,9 +11,11 @@
     <!-- custom css -->
     <link rel="stylesheet" href="./assets/styles/styles.css">
 </head>
+
 <body>
+    <!-- header section  -->
     <div class="container m-12 mx-auto">
-        <header class="bg-sky-100 py-5 px-11 flex justify-between items-center">
+        <header class="bg-sky-100 py-5 px-11 flex justify-between items-center shadow-md rounded-md">
             <div>
                 <h1 class="text-4xl font-bold ">Interactive</h1>
                 <h3 class="font-medium text-2xl text-gray-600">Geometry Genius</h3>
@@ -22,9 +25,109 @@
             </div>
         </header>
     </div>
+    <!-- main section -->
+    <main>
+        <section class="lg:grid grid-cols-4 gap-4 container m-12 mx-auto ">
+            <!-- card section -->
+            <div class="col-span-3 lg:grid grid-cols-3 gap-4">
+                <!-- card-1 -->
+                <div class="text-center p-12 border rounded-md shadow-lg flex flex-col justify-between">
+                    <img class="mx-auto mb-12" src="./assets/images/triangle.png" alt="triangle">
+                    <h3 class="font-bold text-2xl mb-2">Triangle</h3>
+                    <p>Area (A) = 0.5 x b x h</p>
+                    <div >
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text" name="triangle-base" id="triangle-base" placeholder="b">
+                        <label for="triangle-base">cm</label>
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text" name="triangle-height" id="triangle-height" placeholder="h">
+                        <label for="triangle-height">cm</label>
+                    </div>
+                    <button class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>
+                </div>
+                <!-- card-2 -->
+                <div class="text-center p-12 border rounded-md shadow-lg flex flex-col justify-between">
+                    <img class="mx-auto mb-12" src="./assets/images/rectangle.png" alt="rectangle">
+                    <h3 class="font-bold text-2xl mb-2">Rectangle</h3>
+                    <p>Area (A) = w x l</p>
+                    <div >
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text" name="Rectangle-width" id="Rectangle-width" placeholder="w">
+                        <label for="Rectangle-width">cm</label>
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text" name="Rectangle-length" id="Rectangle-length" placeholder="l">
+                        <label for="Rectangle-length">cm</label>
+                    </div>
+                    <button class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>
+                </div>
+                <!-- card-3 -->
+                <div class="text-center p-12 border rounded-md shadow-lg flex flex-col justify-between">
+                    <img class="mx-auto mb-12" src="./assets/images/parallelogram.png" alt="parallelogram">
+                    <h3 class="font-bold text-2xl mb-2">parallelogram</h3>
+                    <p>Area (A) = b x h</p>
+                    <p>b = 10cm, h = 12cm</p>
+                    <div >
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text" name="parallelogram-base" id="parallelogram-base" placeholder="b">
+                        <label for="parallelogram-base">cm</label>
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text" name="parallelogram-height" id="parallelogram-height" placeholder="h">
+                        <label for="parallelogram-height">cm</label>
+                    </div>
+                    <button class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>
+                </div>
+                <!-- card-4 -->
+                <div class="text-center p-12 border rounded-md shadow-lg flex flex-col justify-between">
+                    <img class="mx-auto mb-12" src="./assets/images/rhombus.png" alt="rhombus">
+                    <h3 class="font-bold text-2xl mb-2">Rhombus</h3>
+                    <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                    <p>d<sub>1</sub> = 16cm d<sub>2</sub> = 8cm</p>
+                    <div >
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text" name="rhombus-d1" id="rhombus-d1" placeholder="d1">
+                        <label for="rhombus-d1">cm</label>
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text" name="rhombus-d2" id="rhombus-d2" placeholder="h">
+                        <label for="rhombus-d2">cm</label>
+                    </div>
+                    <button class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>
+                </div>
+                <!-- card-5 -->
+                <div class="text-center p-12 border rounded-md shadow-lg flex flex-col justify-between">
+                    <img class="mx-auto mb-12" src="./assets/images/pentagon.png" alt="pentagon">
+                    <h3 class="font-bold text-2xl mb-2">Pentagon</h3>
+                    <p>Area (A) = 0.5 x p x b</p>
+                    <p>p = 6cm , b = 10cm</p>
+                    <div >
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text" name="pentagon-p" id="pentagon-p" placeholder="p">
+                        <label for="pentagon-p">cm</label>
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text" name="pentagon-base" id="pentagon-base" placeholder="b">
+                        <label for="pentagon-base">cm</label>
+                    </div>
+                    <button class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>
+                </div>
+                <!-- card-6 -->
+                <div class="text-center p-12 border rounded-md shadow-lg flex flex-col justify-between">
+                    <div>
+                        <img class="mx-auto mb-12" src="./assets/images/ellipse.png" alt="ellipse">
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-2xl mb-2">ellipse</h3>
+                    <p>Area (A) = PI x ab</p>
+                    <div >
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text" name="ellipse-a" id="ellipse-a" placeholder="a">
+                        <label for="ellipse-a">cm</label>
+                        <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text" name="ellipse-b" id="ellipse-b" placeholder="b">
+                        <label for="ellipse-b">cm</label>
+                    </div>
+                    <button class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <!-- result area -->
+                <div class="p-12 border rounded-md shadow-lg h-64">
+                    <h3 class="underline underline-offset-2 font-bold text-xl text-center">Area Calculation</h3>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Geometry calculator JavaScripts  -->
     <script src="./assets/scripts/utilities.js"></script>
     <script src="./assets/scripts/geometry.js"></script>
 </body>
+
 </html>
