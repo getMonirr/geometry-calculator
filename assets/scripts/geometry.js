@@ -41,7 +41,7 @@ cards.forEach(function (card) {
 blogPageBtn.addEventListener('click', goToBlogPage);
 
 checkBoxes.forEach(checkbox => {
-    checkbox.addEventListener('click',handleCheckBox);
+    checkbox.addEventListener('click', handleCheckBox);
 })
 
 
@@ -241,16 +241,16 @@ function handleEditBtn(e) {
 
 // for check box
 
-function handleCheckBox(e){
+function handleCheckBox(e) {
     const target = e.target.parentNode;
     const twoInputs = document.querySelectorAll(`#${target.id} input:not(:last-child)`);
-    if(e.target.hasAttribute('checked')){
+    if (e.target.hasAttribute('checked')) {
         e.target.removeAttribute('checked');
         twoInputs.forEach(input => {
             input.disabled = false;
         })
-    }else{
-        e.target.setAttribute('checked',true);
+    } else {
+        e.target.setAttribute('checked', true);
         twoInputs.forEach(input => {
             input.disabled = true;
         })
