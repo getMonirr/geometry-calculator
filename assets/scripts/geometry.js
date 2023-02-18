@@ -57,12 +57,12 @@ blogPageBtn.addEventListener('click', goToBlogPage);
 
 //for triangle calculate
 function handleTriangleCalculate() {
-    
+
     //get value
     const name = getInnerTextById('triangle-name');
     const base = getInputValueById('triangle-base');
     const height = getInputValueById('triangle-height');
-    
+
     // validation
     if (base === 0 || height === 0) {
         return;
@@ -83,12 +83,12 @@ function handleTriangleCalculate() {
 
 // for rectangle calculate
 function handleRectangleCalculate() {
-    
+
     //get value
     const name = getInnerTextById('rectangle-name');
     const width = getInputValueById('rectangle-width');
     const length = getInputValueById('rectangle-length');
-    
+
     // validation
     if (width === 0 || length === 0) {
         return;
@@ -110,7 +110,7 @@ function handleRectangleCalculate() {
 // parallelogram area calculate
 
 function handleParaCalculate() {
-    
+
     //get value
     const name = getInnerTextById('parallelogram-name');
     const base = getInputValueById('parallelogram-base');
@@ -122,7 +122,7 @@ function handleParaCalculate() {
     };
     // set serial 
     serial += 1;
-    
+
     // area calculate
     const parallelogramArea = areaCalculate('parallelogram', base, height);
 
@@ -136,17 +136,17 @@ function handleParaCalculate() {
 // rhombus area calculate
 
 function handleRhombusCalculate() {
-    
+
     //get value
     const name = getInnerTextById('rhombus-name');
     const d1 = getInputValueById('rhombus-d1');
     const d2 = getInputValueById('rhombus-d2');
-    
+
     // validation
     if (d1 === 0 || d2 === 0) {
         return;
     };
-    
+
     // set serial 
     serial += 1;
     // area calculate
@@ -163,12 +163,12 @@ function handleRhombusCalculate() {
 // pentagon area calculate
 
 function handlePentagonCalculate() {
-    
+
     //get value
     const name = getInnerTextById('pentagon-name');
     const p = getInputValueById('pentagon-p');
     const base = getInputValueById('pentagon-base');
-    
+
     // validation
     if (p === 0 || base === 0) {
         return;
@@ -189,12 +189,12 @@ function handlePentagonCalculate() {
 // ellipse area calculate
 
 function handleEllipseCalculate() {
-    
+
     //get value
     const name = getInnerTextById('ellipse-name');
     const a = getInputValueById('ellipse-a');
     const b = getInputValueById('ellipse-b');
-    
+
     // validation
     if (a === 0 || b === 0) {
         return;
@@ -226,8 +226,13 @@ function handleCmToM(e) {
         return;
     };
     if (e.target.id === 'convert-cm-m') {
-        // const targetId = e.target.parentNode.previousElementSibling.children[0].id;
-    } else if(e.target.id === 'remove') {
+        const targetId = e.target.parentNode.previousElementSibling.children[0];
+        const targetIdInnerText = parseInt(targetId.innerText);
+        const meterValue = targetIdInnerText / 100;
+        e.target.parentNode.previousElementSibling.innerHTML = `${meterValue}m<sup>2</sub>`;
+        e.target.disabled = true;
+
+    } else if (e.target.id === 'remove') {
         e.target.parentNode.parentNode.remove();
     }
 }
@@ -237,14 +242,3 @@ function handleEditBtn(e) {
     const targetElementToHide = e.target.parentNode.nextElementSibling;
     targetElementToHide.classList.toggle('hidden');
 }
-
-// function handleInputChange(e){
-//     const inputValue = e.target.value;
-//     if (inputValue === '' || inputValue <= 0 || isNaN(inputValue)) {
-//         alert(`Please input only positive number.`);
-//         return 0;
-//     }
-    
-//     const targetElement = e.target.parentNode.previousElementSibling.children[0].children[0];
-//     targetElement.innerText = inputValue;
-// }

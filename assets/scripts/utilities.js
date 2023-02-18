@@ -33,7 +33,7 @@ function areaCalculate(type, base, height) {
 // display result in ui
 function displayResult(serial, name, area) {
     const tr = document.createElement('tr');
-    tr.className = 'text-xs lg:text-base'
+    tr.className = 'text-xs'
     tr.innerHTML = `
     <td>${serial}.${name}</td>
     <td><span id="result">${area}</span>cm<sup>2</sup></td>
