@@ -37,7 +37,7 @@
                         <img class="mx-auto -mt-6 mb-16" src="./assets/images/triangle.png" alt="triangle">
                     </div>
                     <div>
-                        <h3 class="font-bold text-2xl mb-2">Triangle</h3>
+                        <h3 id="triangle-name" class="font-bold text-2xl mb-2">Triangle</h3>
                         <p>Area (A) = 0.5 x b x h</p>
                         <div>
                             <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text" name="triangle-base"
@@ -47,7 +47,7 @@
                                 name="triangle-height" id="triangle-height" placeholder="h">
                             <label for="triangle-height">cm</label>
                         </div>
-                        <button
+                        <button id="triangle-btn"
                             class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>
                     </div>
                 </div>
@@ -145,8 +145,13 @@
             </div>
             <div class="">
                 <!-- result area -->
-                <div class="p-12 border rounded-md shadow-lg h-64">
+                <div class="p-4 border rounded-md shadow-lg h-1/2">
                     <h3 class="underline underline-offset-2 font-bold text-xl text-center">Area Calculation</h3>
+                    <table class="border-separate border-spacing-y-4 w-full mt-4">
+                        <tbody id="result-container">
+                            <!-- set result here dynamically -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
