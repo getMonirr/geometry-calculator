@@ -80,13 +80,14 @@
                         <p>b = <span>10</span>cm, h = <span>12</span>cm</p>
                         <img id="edit-btn" class="w-[20px] cursor-pointer" src="./assets/images/edit.png" alt="edit">
                     </div>
-                    <div id="to-hide-input" class="hidden">
+                    <div id="to-hide-input" class="hidden flex justify-center items-end gap-2">
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text"
-                            name="parallelogram-base" id="parallelogram-base" placeholder="b" value="10">
+                            name="parallelogram-base" id="parallelogram-base" placeholder="b" value="10" disabled="true">
                         <label for="parallelogram-base">cm</label>
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text"
-                            name="parallelogram-height" id="parallelogram-height" placeholder="h" value="12">
+                            name="parallelogram-height" id="parallelogram-height" placeholder="h" value="12" disabled="true">
                         <label for="parallelogram-height">cm</label>
+                        <input class="p-2 default:ring-4 w-[20px] h-[20px] flex mb-[2px]" type="checkbox" name="checkbox" id="checkbox" checked="true">
                     </div>
                     <button id="parallelogram-btn"
                         class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>
@@ -100,13 +101,14 @@
                         <p>d<sub>1</sub> = 16cm d<sub>2</sub> = 8cm</p>
                         <img id="edit-btn" class="w-[20px] cursor-pointer" src="./assets/images/edit.png" alt="edit">
                     </div>
-                    <div class="hidden">
+                    <div id="for-select" class="hidden flex justify-center items-end gap-2">
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text" name="rhombus-d1"
-                            id="rhombus-d1" placeholder="d1" value="16">
+                            id="rhombus-d1" placeholder="d1" value="16" disabled="true">
                         <label for="rhombus-d1">cm</label>
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text" name="rhombus-d2"
-                            id="rhombus-d2" placeholder="h" value="8">
+                            id="rhombus-d2" placeholder="h" value="8" disabled="true">
                         <label for="rhombus-d2">cm</label>
+                        <input class="p-2 default:ring-4 w-[20px] h-[20px] flex mb-[2px]" type="checkbox" name="checkbox" id="checkbox" checked="true">
                     </div>
                     <button id="rhombus-btn"
                         class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>
@@ -120,13 +122,14 @@
                         <p>p = 6cm , b = 10cm</p>
                         <img id="edit-btn" class="w-[20px] cursor-pointer" src="./assets/images/edit.png" alt="edit">
                     </div>
-                    <div class="hidden">
+                    <div id="for-select" class="hidden flex justify-center items-end gap-2">
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text" name="pentagon-p"
-                            id="pentagon-p" placeholder="p" value="6">
+                            id="pentagon-p" placeholder="p" value="6" disabled="true">
                         <label for="pentagon-p">cm</label>
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text"
-                            name="pentagon-base" id="pentagon-base" placeholder="b" value="8">
+                            name="pentagon-base" id="pentagon-base" placeholder="b" value="8" disabled="true">
                         <label for="pentagon-base">cm</label>
+                        <input class="p-2 default:ring-4 w-[20px] h-[20px] flex mb-[2px]" type="checkbox" name="checkbox" id="checkbox" checked="true">
                     </div>
                     <button id="pentagon-btn"
                         class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>

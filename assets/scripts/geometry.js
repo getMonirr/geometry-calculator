@@ -12,11 +12,9 @@ const ellipseCalcBtn = document.getElementById('ellipse-btn');
 
 const cards = document.querySelectorAll('.card');
 const blogPageBtn = document.getElementById('blog-page')
-
 const resultContainer = document.getElementById('result-container');
-
 const editBtns = document.querySelectorAll('#edit-btn');
-// const inputs = document.querySelectorAll('input');
+const checkBoxes = document.querySelectorAll('#checkbox');
 
 
 // add event listener part
@@ -42,11 +40,9 @@ cards.forEach(function (card) {
 // go to blog page
 blogPageBtn.addEventListener('click', goToBlogPage);
 
-
-// input change and update ui
-// inputs.forEach(input => {
-//     input.addEventListener('change',handleInputChange);
-// })
+checkBoxes.forEach(checkbox => {
+    checkbox.addEventListener('click',handleCheckBox);
+})
 
 
 
@@ -241,4 +237,22 @@ function handleCmToM(e) {
 function handleEditBtn(e) {
     const targetElementToHide = e.target.parentNode.nextElementSibling;
     targetElementToHide.classList.toggle('hidden');
+}
+
+// for check box
+
+function handleCheckBox(e){
+    const target = e.target.parentNode;
+    const twoInputs = document.querySelectorAll(`#${target.id} input:not(:last-child)`);
+    if(e.target.hasAttribute('checked')){
+        e.target.removeAttribute('checked');
+        twoInputs.forEach(input => {
+            input.disabled = false;
+        })
+    }else{
+        e.target.setAttribute('checked',true);
+        twoInputs.forEach(input => {
+            input.disabled = true;
+        })
+    };
 }
