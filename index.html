@@ -57,24 +57,24 @@
                         <img class="mx-auto mb-12" src="./assets/images/rectangle.png" alt="rectangle">
                     </div>
                     <div>
-                        <h3 class="font-bold text-2xl mb-2">Rectangle</h3>
+                        <h3 id="rectangle-name" class="font-bold text-2xl mb-2">Rectangle</h3>
                         <p>Area (A) = w x l</p>
                         <div>
                             <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text"
-                                name="Rectangle-width" id="Rectangle-width" placeholder="w">
-                            <label for="Rectangle-width">cm</label>
+                                name="rectangle-width" id="rectangle-width" placeholder="w">
+                            <label for="rectangle-width">cm</label>
                             <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text"
-                                name="Rectangle-length" id="Rectangle-length" placeholder="l">
-                            <label for="Rectangle-length">cm</label>
+                                name="rectangle-length" id="rectangle-length" placeholder="l">
+                            <label for="rectangle-length">cm</label>
                         </div>
-                        <button
+                        <button id="rectangle-btn"
                             class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>
                     </div>
                 </div>
                 <!-- card-3 -->
                 <div class="text-center p-12 border rounded-md shadow-lg flex flex-col justify-between">
                     <img class="mx-auto mb-12" src="./assets/images/parallelogram.png" alt="parallelogram">
-                    <h3 class="font-bold text-2xl mb-2">parallelogram</h3>
+                    <h3 class="font-bold text-2xl mb-2" id="parallelogram-name">parallelogram</h3>
                     <p>Area (A) = b x h</p>
                     <p>b = 10cm, h = 12cm</p>
                     <div>
@@ -85,7 +85,7 @@
                             name="parallelogram-height" id="parallelogram-height" placeholder="h">
                         <label for="parallelogram-height">cm</label>
                     </div>
-                    <button
+                    <button id="parallelogram-btn"
                         class="py-2 px-9 bg-blue-500 text-white rounded-md font-bold text-xl w-full mt-12">Calculate</button>
                 </div>
                 <!-- card-4 -->

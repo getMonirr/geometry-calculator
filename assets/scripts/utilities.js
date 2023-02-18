@@ -21,13 +21,13 @@ function setInputValueById(id, value) {
 
 function areaCalculate(type, base, height) {
     if (type === 'triangle' || type === 'rhombus' || type === 'pentagon') {
-        return 0.5 * base * height;
+        return (0.5 * base * height).toFixed(2);
     }
     if (type === 'ellipse') {
-        return Math.PI * base * height;
+        return (Math.PI * base * height).toFixed(2);
     }
 
-    return base * height;
+    return (base * height).toFixed(2);
 }
 
 // display result in ui
