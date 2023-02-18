@@ -11,7 +11,7 @@ const pentagonCalcBtn = document.getElementById('pentagon-btn');
 const ellipseCalcBtn = document.getElementById('ellipse-btn');
 
 const cards = document.querySelectorAll('.card');
-
+const blogPageBtn = document.getElementById('blog-page')
 
 
 
@@ -23,12 +23,15 @@ rhombusCalcBtn.addEventListener('click',handleRhombusCalculate);
 pentagonCalcBtn.addEventListener('click',handlePentagonCalculate);
 ellipseCalcBtn.addEventListener('click',handleEllipseCalculate);
 
+// for random color
 cards.forEach(function(card) {
     card.addEventListener('mouseenter',function(){
         card.style.backgroundColor = randomColor();
     })
 })
 
+// go to blog page
+blogPageBtn.addEventListener('click',goToBlogPage);
 
 
 
@@ -196,4 +199,9 @@ function handleEllipseCalculate() {
     displayResult(serial, name, ellipseArea);
 }
 
-// for random color 
+
+
+// go to Blog page
+function goToBlogPage(){
+    window.location.href = 'blog.html';
+}

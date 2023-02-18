@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+
+<body class="p-4 container mx-auto m-12 bg-gray-100">
+    <a href="index.html"><button class="text-center px-4 py-2 bg-amber-500 rounded-md my-5 text-white font-bold">Go Home</button></a>
+    <h1 class="font-bold text-5xl uppercase text-center">WelCome to My <span class="text-orange-500">Blog page</span>
+    </h1>
+    <header class="bg-red-300 p-4 my-8 text-center font-bold text-4xl text-green-900 rounded-md">
+        <h2>Questions and Answers</h2>
+    </header>
+    <main>
+        <!-- question one / article one -->
+        <article class="py-10">
+            <h2 class="font-bold text-2xl mb-3">1. What is DOM and what is the purpose of DOM?</h2>
+            <p class="text-lg text-gray-700">DOM stands for Document Object Model. It is a platform an
+                d language-natural interface. The purpose of DOM is to allow programmers to add programs and scripts to
+                dynamically access and change document structure, content, and style. There are three types of DOM:
+            <ul class="list-decimal list-inside py-2">
+                <li>Core DOM</li>
+                <li>XML DOM</li>
+                <li>HTML DOM</li>
+            </ul>
+
+
+            We only discuss HTML DOM.
+            <p class="py-2">What is the HTML DOM?</p>
+            The HTML DOM is a standard object model and programming interface for HML documents. It treats all HTML
+            Elements as Objects.
+            HTML DOM views an HTML document as a tree of nodes. Each node represents an HTML element.
+            We already know that it is a programming interface so we can access all objects and it allows us to create,
+            change or remove an element from the document. also, we can add so many events for each node or element like
+            'click', 'mouseEnter', 'mouseMove', etc.</p>
+        </article>
+        <!-- question two / article two -->
+        <article class="py-10">
+            <h2 class="font-bold text-2xl mb-3">2. How will you select HTML elements using DOM? Name the DOM methods.
+            </h2>
+            <p class="text-lg text-gray-700 mb-4">There are five different methods for selecting an element in the HTML
+                document. all methods are self-explained by their name.</p>
+            <ol class="list-decimal list-inside space-y-3">
+                <li><code class="text-orange-500">getElementById()</code>
+                    <ul class="indent-4 list-inside">
+                        <li>
+
+                            you can select only one id at a time.
+                        </li>
+                    </ul>
+                </li>
+                <li><code class="text-orange-500">getElementsByClassName()</code>
+                    <ul class="indent-4 list-inside">
+                        <li>
+
+                            you can get all classes by their names that match and it gives us an HTMLCollection.
+                        </li>
+                    </ul>
+                </li>
+                <li><code class="text-orange-500">getElementsByTagName()</code>
+                    <ul class="indent-4 list-inside">
+                        <li>
+
+                            you can get all classes by their tags names that match and it gives us an HTMLCollection.
+                        </li>
+                    </ul>
+                </li>
+                <li><code class="text-orange-500">querySelector()</code>
+                    <ul class="indent-4 list-inside">
+                        <li>
+
+                            it selects an HTML element like a CSS selector.
+                        </li>
+                    </ul>
+                </li>
+                <li><code class="text-orange-500">querySelectorAll()</code>
+                    <ul class="indent-4 list-inside">
+                        <li>
+
+                            it selects all HTML elements that match and it gives us a NodeList.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </article>
+        <!-- question three / article three -->
+        <article class="py-10">
+            <h2 class="font-bold text-2xl mb-3">3. What is event bubble?</h2>
+            <p class="text-lg text-gray-700">Events bubbling is a concept of DOM. It describes how the browser handles
+                events. when an element receives an event, and that event bubbles up (propagated) to its parent elements
+                in the DOM tree until it gets to the root element. this is a default behavior of the browser. it is
+                possible to prevent that? yes of course. if you can't stop bubbling it's running until getting the root
+                element. you can stop it by just calling the <code class="text-orange-500">sotpPropagration()</code>
+                methods. after applying the method event bubbling stops</p>
+        </article>
+        <!-- question four / article four -->
+        <article class="py-10">
+            <h2 class="font-bold text-2xl mb-3">4. What is a callback function and why will you use it?</h2>
+            <p class="text-lg text-gray-700">In javascript, everything is an object.
+                when we write a function, we can pass an object as a parameter. technically in javascript functions are
+                also an object. so definitely we can pass a function as a parameter. it's called the call-back function.
+                that means when we passed a function into a function as a parameter, which is called or invoked inside
+                the function, and completes some task or action.</p>
+            <p class="text-lg text-gray-700 mt-3"> it's also called asynchronous programming. in JavaScript run code
+                sequentially in top-down order. it's the default behavior. when we need to do something and then run
+                other cases and it's not sequentially so what do? the solution to the problem is we have to use the
+                callback function to do the task in a completely asynchronous way not sequentially. that's why we use
+                the callback function. it's very important for asynchronous programming.</p>
+        </article>
+    </main>
+
+</body>
+
+</html>
