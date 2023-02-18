@@ -13,7 +13,8 @@ const ellipseCalcBtn = document.getElementById('ellipse-btn');
 const cards = document.querySelectorAll('.card');
 const blogPageBtn = document.getElementById('blog-page')
 
-
+const resultContainer = document.getElementById('result-container');
+// const convertCmToM = document.getElementById('convert-cm-m');
 
 // add event listener part
 triangleCalcBtn.addEventListener('click', handleTriangleCalculate);
@@ -22,6 +23,8 @@ paraCalcBtn.addEventListener('click', handleParaCalculate);
 rhombusCalcBtn.addEventListener('click',handleRhombusCalculate);
 pentagonCalcBtn.addEventListener('click',handlePentagonCalculate);
 ellipseCalcBtn.addEventListener('click',handleEllipseCalculate);
+
+resultContainer.addEventListener('click',handleCmToM);
 
 // for random color
 cards.forEach(function(card) {
@@ -204,4 +207,16 @@ function handleEllipseCalculate() {
 // go to Blog page
 function goToBlogPage(){
     window.location.href = 'blog.html';
+}
+
+// convert cm to m
+function handleCmToM(e){
+    if(!e.target.hasAttribute('id')){
+        return;
+    };
+    if(e.target.id === 'convert-cm-m'){
+        // const targetId = e.target.parentNode.previousElementSibling.children[0].id;
+    }else{
+        e.target.parentNode.parentNode.remove();
+    }
 }

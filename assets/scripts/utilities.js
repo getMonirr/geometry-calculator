@@ -35,7 +35,7 @@ function displayResult(serial, name, area) {
     const tr = document.createElement('tr');
     tr.innerHTML = `
     <td>${serial}.${name}</td>
-    <td>${area}cm<sup>2</sup></td>
+    <td><span id="result">${area}</span>cm<sup>2</sup></td>
      <td>
      <button 
      id="convert-cm-m" 
