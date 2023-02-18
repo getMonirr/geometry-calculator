@@ -14,28 +14,39 @@ const cards = document.querySelectorAll('.card');
 const blogPageBtn = document.getElementById('blog-page')
 
 const resultContainer = document.getElementById('result-container');
-// const convertCmToM = document.getElementById('convert-cm-m');
+
+const editBtns = document.querySelectorAll('#edit-btn');
+// const inputs = document.querySelectorAll('input');
+
 
 // add event listener part
 triangleCalcBtn.addEventListener('click', handleTriangleCalculate);
 rectangleCalcBtn.addEventListener('click', handleRectangleCalculate);
 paraCalcBtn.addEventListener('click', handleParaCalculate);
-rhombusCalcBtn.addEventListener('click',handleRhombusCalculate);
-pentagonCalcBtn.addEventListener('click',handlePentagonCalculate);
-ellipseCalcBtn.addEventListener('click',handleEllipseCalculate);
+rhombusCalcBtn.addEventListener('click', handleRhombusCalculate);
+pentagonCalcBtn.addEventListener('click', handlePentagonCalculate);
+ellipseCalcBtn.addEventListener('click', handleEllipseCalculate);
 
-resultContainer.addEventListener('click',handleCmToM);
+resultContainer.addEventListener('click', handleCmToM);
 
+editBtns.forEach(btn => {
+    btn.addEventListener('click', handleEditBtn);
+})
 // for random color
-cards.forEach(function(card) {
-    card.addEventListener('mouseenter',function(){
+cards.forEach(function (card) {
+    card.addEventListener('mouseenter', function () {
         card.style.backgroundColor = randomColor();
     })
 })
 
 // go to blog page
-blogPageBtn.addEventListener('click',goToBlogPage);
+blogPageBtn.addEventListener('click', goToBlogPage);
 
+
+// input change and update ui
+// inputs.forEach(input => {
+//     input.addEventListener('change',handleInputChange);
+// })
 
 
 
@@ -116,8 +127,8 @@ function handleParaCalculate() {
     const parallelogramArea = areaCalculate('parallelogram', base, height);
 
     // reset input value 
-    setInputValueById('parallelogram-base', '');
-    setInputValueById('parallelogram-height', '');
+    // setInputValueById('parallelogram-base', '');
+    // setInputValueById('parallelogram-height', '');
 
     // display result in ui
     displayResult(serial, name, parallelogramArea);
@@ -142,8 +153,8 @@ function handleRhombusCalculate() {
     const rhombusArea = areaCalculate('rhombus', d1, d2);
 
     // reset input value 
-    setInputValueById('rhombus-d1', '');
-    setInputValueById('rhombus-d2', '');
+    // setInputValueById('rhombus-d1', '');
+    // setInputValueById('rhombus-d2', '');
 
     // display result in ui
     displayResult(serial, name, rhombusArea);
@@ -169,8 +180,8 @@ function handlePentagonCalculate() {
     const pentagonArea = areaCalculate('pentagon', p, base);
 
     // reset input value 
-    setInputValueById('pentagon-p', '');
-    setInputValueById('pentagon-base', '');
+    // setInputValueById('pentagon-p', '');
+    // setInputValueById('pentagon-base', '');
 
     // display result in ui
     displayResult(serial, name, pentagonArea);
@@ -205,18 +216,35 @@ function handleEllipseCalculate() {
 
 
 // go to Blog page
-function goToBlogPage(){
+function goToBlogPage() {
     window.location.href = 'blog.html';
 }
 
 // convert cm to m
-function handleCmToM(e){
-    if(!e.target.hasAttribute('id')){
+function handleCmToM(e) {
+    if (!e.target.hasAttribute('id')) {
         return;
     };
-    if(e.target.id === 'convert-cm-m'){
+    if (e.target.id === 'convert-cm-m') {
         // const targetId = e.target.parentNode.previousElementSibling.children[0].id;
-    }else{
+    } else if(e.target.id === 'remove') {
         e.target.parentNode.parentNode.remove();
     }
 }
+
+// for handle edit button
+function handleEditBtn(e) {
+    const targetElementToHide = e.target.parentNode.nextElementSibling;
+    targetElementToHide.classList.toggle('hidden');
+}
+
+// function handleInputChange(e){
+//     const inputValue = e.target.value;
+//     if (inputValue === '' || inputValue <= 0 || isNaN(inputValue)) {
+//         alert(`Please input only positive number.`);
+//         return 0;
+//     }
+    
+//     const targetElement = e.target.parentNode.previousElementSibling.children[0].children[0];
+//     targetElement.innerText = inputValue;
+// }

@@ -76,13 +76,16 @@
                     <img class="mx-auto mb-12" src="./assets/images/parallelogram.png" alt="parallelogram">
                     <h3 class="font-bold text-2xl mb-2" id="parallelogram-name">parallelogram</h3>
                     <p>Area (A) = b x h</p>
-                    <p>b = 10cm, h = 12cm</p>
-                    <div>
+                    <div class="flex gap-4">
+                        <p>b = <span>10</span>cm, h = <span>12</span>cm</p>
+                        <img id="edit-btn" class="w-[20px] cursor-pointer" src="./assets/images/edit.png" alt="edit">
+                    </div>
+                    <div id="to-hide-input" class="hidden">
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text"
-                            name="parallelogram-base" id="parallelogram-base" placeholder="b">
+                            name="parallelogram-base" id="parallelogram-base" placeholder="b" value="10">
                         <label for="parallelogram-base">cm</label>
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text"
-                            name="parallelogram-height" id="parallelogram-height" placeholder="h">
+                            name="parallelogram-height" id="parallelogram-height" placeholder="h" value="12">
                         <label for="parallelogram-height">cm</label>
                     </div>
                     <button id="parallelogram-btn"
@@ -93,13 +96,16 @@
                     <img class="mx-auto mb-12" src="./assets/images/rhombus.png" alt="rhombus">
                     <h3 id="rhombus-name" class="font-bold text-2xl mb-2">Rhombus</h3>
                     <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
-                    <p>d<sub>1</sub> = 16cm d<sub>2</sub> = 8cm</p>
-                    <div>
+                    <div class="flex gap-4">
+                        <p>d<sub>1</sub> = 16cm d<sub>2</sub> = 8cm</p>
+                        <img id="edit-btn" class="w-[20px] cursor-pointer" src="./assets/images/edit.png" alt="edit">
+                    </div>
+                    <div class="hidden">
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text" name="rhombus-d1"
-                            id="rhombus-d1" placeholder="d1">
+                            id="rhombus-d1" placeholder="d1" value="16">
                         <label for="rhombus-d1">cm</label>
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text" name="rhombus-d2"
-                            id="rhombus-d2" placeholder="h">
+                            id="rhombus-d2" placeholder="h" value="8">
                         <label for="rhombus-d2">cm</label>
                     </div>
                     <button id="rhombus-btn"
@@ -110,13 +116,16 @@
                     <img class="mx-auto mb-12" src="./assets/images/pentagon.png" alt="pentagon">
                     <h3 id="pentagon-name" class="font-bold text-2xl mb-2">Pentagon</h3>
                     <p>Area (A) = 0.5 x p x b</p>
-                    <p>p = 6cm , b = 10cm</p>
-                    <div>
+                    <div class="flex gap-4">
+                        <p>p = 6cm , b = 10cm</p>
+                        <img id="edit-btn" class="w-[20px] cursor-pointer" src="./assets/images/edit.png" alt="edit">
+                    </div>
+                    <div class="hidden">
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 rounded-sm" type="text" name="pentagon-p"
-                            id="pentagon-p" placeholder="p">
+                            id="pentagon-p" placeholder="p" value="6">
                         <label for="pentagon-p">cm</label>
                         <input class="px-3 w-1/4 bg-slate-300 mr-3 mt-3 ml-3 rounded-sm" type="text"
-                            name="pentagon-base" id="pentagon-base" placeholder="b">
+                            name="pentagon-base" id="pentagon-base" placeholder="b" value="8">
                         <label for="pentagon-base">cm</label>
                     </div>
                     <button id="pentagon-btn"
