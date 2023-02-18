@@ -57,18 +57,18 @@ blogPageBtn.addEventListener('click', goToBlogPage);
 
 //for triangle calculate
 function handleTriangleCalculate() {
-    // set serial 
-    serial += 1;
-
+    
     //get value
     const name = getInnerTextById('triangle-name');
     const base = getInputValueById('triangle-base');
     const height = getInputValueById('triangle-height');
-
+    
     // validation
     if (base === 0 || height === 0) {
         return;
     };
+    // set serial 
+    serial += 1;
 
     // area calculate
     const triangleArea = areaCalculate('triangle', base, height);
@@ -83,18 +83,18 @@ function handleTriangleCalculate() {
 
 // for rectangle calculate
 function handleRectangleCalculate() {
-    // set serial 
-    serial += 1;
-
+    
     //get value
     const name = getInnerTextById('rectangle-name');
     const width = getInputValueById('rectangle-width');
     const length = getInputValueById('rectangle-length');
-
+    
     // validation
     if (width === 0 || length === 0) {
         return;
     };
+    // set serial 
+    serial += 1;
 
     // area calculate
     const rectangleArea = areaCalculate('rectangle', width, length);
@@ -110,9 +110,7 @@ function handleRectangleCalculate() {
 // parallelogram area calculate
 
 function handleParaCalculate() {
-    // set serial 
-    serial += 1;
-
+    
     //get value
     const name = getInnerTextById('parallelogram-name');
     const base = getInputValueById('parallelogram-base');
@@ -122,7 +120,9 @@ function handleParaCalculate() {
     if (base === 0 || height === 0) {
         return;
     };
-
+    // set serial 
+    serial += 1;
+    
     // area calculate
     const parallelogramArea = areaCalculate('parallelogram', base, height);
 
@@ -136,19 +136,19 @@ function handleParaCalculate() {
 // rhombus area calculate
 
 function handleRhombusCalculate() {
-    // set serial 
-    serial += 1;
-
+    
     //get value
     const name = getInnerTextById('rhombus-name');
     const d1 = getInputValueById('rhombus-d1');
     const d2 = getInputValueById('rhombus-d2');
-
+    
     // validation
     if (d1 === 0 || d2 === 0) {
         return;
     };
-
+    
+    // set serial 
+    serial += 1;
     // area calculate
     const rhombusArea = areaCalculate('rhombus', d1, d2);
 
@@ -163,18 +163,18 @@ function handleRhombusCalculate() {
 // pentagon area calculate
 
 function handlePentagonCalculate() {
-    // set serial 
-    serial += 1;
-
+    
     //get value
     const name = getInnerTextById('pentagon-name');
     const p = getInputValueById('pentagon-p');
     const base = getInputValueById('pentagon-base');
-
+    
     // validation
     if (p === 0 || base === 0) {
         return;
     };
+    // set serial 
+    serial += 1;
 
     // area calculate
     const pentagonArea = areaCalculate('pentagon', p, base);
@@ -189,18 +189,18 @@ function handlePentagonCalculate() {
 // ellipse area calculate
 
 function handleEllipseCalculate() {
-    // set serial 
-    serial += 1;
-
+    
     //get value
     const name = getInnerTextById('ellipse-name');
     const a = getInputValueById('ellipse-a');
     const b = getInputValueById('ellipse-b');
-
+    
     // validation
     if (a === 0 || b === 0) {
         return;
     };
+    // set serial 
+    serial += 1;
 
     // area calculate
     const ellipseArea = areaCalculate('ellipse', a, b);
