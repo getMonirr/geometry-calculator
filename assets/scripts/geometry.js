@@ -3,23 +3,31 @@ let serial = 0;
 
 // selection part
 
-const triangleBtn = document.getElementById('triangle-btn');
-const rectangleBtn = document.getElementById('rectangle-btn');
-const paraBtn = document.getElementById('parallelogram-btn');
-const rhombusBtn = document.getElementById('rhombus-btn');
-const pentagonBtn = document.getElementById('pentagon-btn');
-const ellipseBtn = document.getElementById('ellipse-btn');
+const triangleCalcBtn = document.getElementById('triangle-btn');
+const rectangleCalcBtn = document.getElementById('rectangle-btn');
+const paraCalcBtn = document.getElementById('parallelogram-btn');
+const rhombusCalcBtn = document.getElementById('rhombus-btn');
+const pentagonCalcBtn = document.getElementById('pentagon-btn');
+const ellipseCalcBtn = document.getElementById('ellipse-btn');
+
+const cards = document.querySelectorAll('.card');
 
 
 
 
 // add event listener part
-triangleBtn.addEventListener('click', handleTriangleCalculate);
-rectangleBtn.addEventListener('click', handleRectangleCalculate);
-paraBtn.addEventListener('click', handleParaCalculate);
-rhombusBtn.addEventListener('click',handleRhombusCalculate);
-pentagonBtn.addEventListener('click',handlePentagonCalculate);
-ellipseBtn.addEventListener('click',handleEllipseCalculate);
+triangleCalcBtn.addEventListener('click', handleTriangleCalculate);
+rectangleCalcBtn.addEventListener('click', handleRectangleCalculate);
+paraCalcBtn.addEventListener('click', handleParaCalculate);
+rhombusCalcBtn.addEventListener('click',handleRhombusCalculate);
+pentagonCalcBtn.addEventListener('click',handlePentagonCalculate);
+ellipseCalcBtn.addEventListener('click',handleEllipseCalculate);
+
+cards.forEach(card => {
+    card.addEventListener('mouseenter',function(){
+        card.style.backgroundColor = randomColor();
+    })
+})
 
 
 
@@ -187,3 +195,5 @@ function handleEllipseCalculate() {
     // display result in ui
     displayResult(serial, name, ellipseArea);
 }
+
+// for random color 

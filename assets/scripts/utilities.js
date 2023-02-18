@@ -48,3 +48,15 @@ function displayResult(serial, name, area) {
     const resultContainer = document.getElementById('result-container');
     resultContainer.appendChild(tr);
 }
+
+// random color generator
+function randomColor(){
+    let color =[];
+    for(let i = 1; i <= 3; i++){
+        color.push(Math.floor(Math.random() * 256));
+    }
+    
+    return `rgb(${color.join(',')})`;
+}
+
+console.log(randomColor());
