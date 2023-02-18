@@ -224,7 +224,7 @@ function handleCmToM(e) {
     if (e.target.id === 'convert-cm-m') {
         const targetId = e.target.parentNode.previousElementSibling.children[0];
         const targetIdInnerText = parseInt(targetId.innerText);
-        const meterValue = targetIdInnerText / 100;
+        const meterValue = (targetIdInnerText / 100).toFixed(2);
         e.target.parentNode.previousElementSibling.innerHTML = `${meterValue}m<sup>2</sub>`;
         e.target.disabled = true;
 
