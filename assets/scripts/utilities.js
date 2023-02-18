@@ -33,13 +33,14 @@ function areaCalculate(type, base, height) {
 // display result in ui
 function displayResult(serial, name, area) {
     const tr = document.createElement('tr');
+    tr.className = 'text-xs lg:text-base'
     tr.innerHTML = `
     <td>${serial}.${name}</td>
     <td><span id="result">${area}</span>cm<sup>2</sup></td>
      <td>
      <button 
      id="convert-cm-m" 
-     class="py-1 px-2 bg-blue-500 text-white rounded-md">
+     class="py-1 px-2 bg-blue-500 text-white rounded-md text-xs lg:text-base">
      Convert to m<sup>2</sup>
     </button>
     </td>
